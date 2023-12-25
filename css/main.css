@@ -1,0 +1,101 @@
+*{
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    background-color: #F7ECDE;
+}
+
+.main-color{
+    color: #3DA55B;
+}
+
+.main-color1{
+    color: #B2AC4A;
+}
+
+/* .h2{
+   color: red linear-gradient( red , black ); 
+    background-image: linear-gradient(to left , #3DA55B 0% 50% ,  #B2AC4A  60% 100%);
+} */
+
+h1{
+    position: relative;
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+ h1::before{ 
+    content: "";
+    width: 15rem;
+    height: 1.875rem;    
+     background-color: red;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50% , 50%);
+    z-index: -1;
+} 
+
+h1:hover::before{
+    /* top: 50%; */
+    /* bottom: 50%; */
+    /* background-color: aqua; */
+    /* height: 50%; */
+}
+
+.brdr{
+    border-bottom: .125rem dotted black;
+}
+
+.span1{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: tomato;
+}
+
+.span2{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: yellow;
+}
+
+.span3{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(0, 128, 0, 0.722);
+}
+
+#form{
+    margin-top: 20px !important;
+    background-color: white;
+    width: 40%;
+    position: absolute;
+    top: 20%;
+    left: 30%;
+}
+
+#form p{
+    font-size: 1.30rem;
+    font-weight: 700;
+}
+
+#form span{
+    font-size: 1.25rem;
+}
+
+#form button{
+    border: none;
+    background-color: transparent;
+}
+
+#form ul li i{
+    color: tomato;
+}

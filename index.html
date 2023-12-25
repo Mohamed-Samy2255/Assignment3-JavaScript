@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmarker</title>
+    <!-- ======font awesom====== -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- main css -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body >
+    
+    <main class="interface">
+        <div class="container">
+            <div class="color"></div>
+            <h1 class="mb-5 p-3 brdr">Bookmarker</h1>
+            
+            <div class="bookmark-body w-75 mx-auto p-3">
+               <h2 class="h2 text-center ">
+                 <i class="fa-solid fa-bookmark main-color"></i>
+                Bookmark your favorite sites
+                <i class="fa-solid fa-bookmark main-color1"></i>
+               </h2>
+
+              <div>
+                <i class="fa-solid fa-book-bookmark pe-2"></i>
+                <label for=" siteNameInpute"> Site Name:</label>
+                <input oninput="validationName()" class="form-control" type="text" id="siteNameInpute" placeholder="Bookmark Name">
+                <div id="nameMessage" class="alert alert-danger d-none"> It must be written with a capital letter and then 3 to 10 small letters </div>
+              </div>
+              <div>
+                <i class="fa-solid fa-book-bookmark pe-2"></i>
+                <label for=" siteURLInpute"> Site URL:</label>
+                <input oninput="validationUrl()" class="form-control" type="text" id="siteURLInpute" placeholder="Website URL">
+                <div id="sitMessage" class="d-none alert alert-danger">Please write the location correctly</div>
+              </div>
+
+             <div class=" d-flex justify-content-center align-items-centerdotted brdr">
+                 <button id="submit" onclick="addBookmarker()" class="btn  my-3 bg-warning ">Submit</button>
+             </div>
+             
+             <table class="table my-3 text-center">
+                <thead>
+                    <tr>
+                        <th>Index</th>
+                        <th>Website Name</th>
+                        <th>Visit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    
+                </tbody>
+             </table>
+
+            
+
+            </div>
+
+            <div id="form" onclick="cancel()" class="d-none bg-dange mx-auto p-3 rounded-2 position-absolute start-0 end-0">
+                <div class="row">
+                    <div class="col text-center">
+                        <div class="circles d-flex">
+                            <span class="rounded-circle me-2 span1"></span>
+                            <span class="rounded-circle me-2 span2"></span>
+                            <span class="rounded-circle me-2 span3"></span>
+                        </div> 
+                    </div>
+
+                    <div class="col ms-5 d-flex flex-row-reverse">
+                        <button class="" onclick="cancel();">
+                            <i id="x" class="fa-solid fa-xmark close fs-3"></i>
+                        </button>
+                    </div>
+                    <p>Site Name or Url is not valid, Please follow the <br> rules below :</p>
+                    <ul>
+                        <li>
+                            <i class="fa-regular fa-circle-right p-2"></i>
+                            <span>Site name must contain at least 3 characters</span>
+                        </li>
+                        <li>
+                            <i class="fa-regular fa-circle-right p-2"></i>
+                            <span>Site URL must be a valid one</span>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+
+            
+        </div> 
+
+        </div>
+
+    </main>
+
+
+
+
+
+
+
+
+
+
+    <script src="js/main.js"></script>
+</body>
+</html>
